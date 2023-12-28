@@ -4,7 +4,6 @@ on: # specify the build to trigger the automated ci/cd
     push:
         branches:
             - "main"
-
 jobs:
     build:
         name: Build Docker image
