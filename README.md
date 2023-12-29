@@ -181,6 +181,6 @@ Erwartet, dass der Antworttext "Hello World!" ist.
 
 ### Benachrichtigung
 
-Nach dem durchlaufen der Pipeline werden Benachrichtigungen in Form von Mails verschickt. Die Einstellung dafür ist in GitHub zu finden. 
+Nach dem Push werden Benachrichtigungen in Form von Mails verschickt. Die Einstellung dafür ist in GitHub zu finden. Ebenfalls gibt es eine Benachrichtigung wenn der Durchlauf der Pipeline failed. 
 
 ![screenshot12](/resources/img/screen12.png)
