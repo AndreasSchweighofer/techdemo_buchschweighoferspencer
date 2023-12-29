@@ -1,4 +1,3 @@
-// app.js
 const express = require('express');
 const app = express();
 
@@ -6,9 +5,17 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server läuft auf Port ${PORT}`);
-});
+function startServer() {
+    const PORT = process.env.PORT || 3000;
+    const server = app.listen(PORT, () => {
+        console.log(`Server läuft auf Port ${PORT}`);
+    });
+    return server;
+}
 
-module.exports = app; // Für Testzwecke
+if (require.main === module) {
+    // Direkter Aufruf, starte den Server
+    startServer();
+}
+
+module.exports = { app, startServer }; // Exportieren für Testzwecke
