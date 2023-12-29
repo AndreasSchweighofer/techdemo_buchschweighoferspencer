@@ -10,42 +10,44 @@ Es wird dringend empfohlen, diese Checkliste in Ihr eigenes Projekt-Repository z
 ## Checkliste für die eigene fortlaufende Übung in Continuous Delivery
 
 ### Einführung und Grundlagen
-- [ ] Verständnis von Continuous Delivery und dessen Bedeutung
-- [ ] Unterschiede zwischen Continuous Integration, Continuous Delivery und Continuous Deployment
-- [ ] CI-Anti Pattern identifizieren
+- [x] Verständnis von Continuous Delivery und dessen Bedeutung
+- [x] Unterschiede zwischen Continuous Integration, Continuous Delivery und Continuous Deployment
+- [x] CI-Anti Pattern identifizieren
 
 ### Automatisierung
-- [ ] Automatisierte Builds eingerichtet
-- [ ] Automatisierte Tests implementiert
-- [ ] Automatisierte Deployments konfiguriert
+- [x] Automatisierte Builds eingerichtet
+- [x] Automatisierte Tests implementiert
+- [x] Automatisierte Deployments konfiguriert
 
 ### Testing
-- [ ] Unit Tests geschrieben und automatisiert
+- [x] Unit Tests geschrieben und automatisiert
 - [ ] Integrationstests implementiert (optional)
 - [ ] End-to-End Tests eingerichtet (optional)
 
 ### Deployment-Strategien
-- [ ] Deployment-Strategien identifizieren
+- [x] Deployment-Strategien identifizieren
 - [ ] Rollback-Strategien (optional)
 
 ### Containerisierung
-- [ ] Docker oder ähnliche Technologien eingesetzt
-- [ ] Integration in eine Build-Pipeline
+- [x] Docker oder ähnliche Technologien eingesetzt
+- [x] Integration in eine Build-Pipeline
 
 ### Konfigurationsmanagement
-- [ ] Konfigurationsdateien versioniert und zentralisiert
-- [ ] Verwendung in einer Build-Pipeline
+- [x] Konfigurationsdateien versioniert und zentralisiert
+- [x] Verwendung in einer Build-Pipeline
 
 ### Feedback-Schleifen & Benachrichtigungen
 - [ ] Feedback von Stakeholdern eingeholt und implementiert
-- [ ] Developer Benachrichtigungen
+- [x] Developer Benachrichtigungen
 
 ### Sicherheit
-- [ ] Zugangsdaten sicher hinterlegt
+- [x] Zugangsdaten sicher hinterlegt
 
 ### Datenbanken
 - [ ] Datenbank-Migrationen automatisiert
 - [ ] Datenbank-Backups und Recovery-Pläne
 
+Diesen Punkt haben wir in unserem Projekt nicht integriert, da dies in dem Beispiel weniger Sinn macht bzw. sehr weit hergeholt wäre.
+
 ### Abschluss und Dokumentation
-- [ ] Projekt-Dokumentation vervollständigt
+- [x] Projekt-Dokumentation vervollständigt

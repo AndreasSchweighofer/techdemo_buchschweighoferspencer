@@ -1,6 +1,8 @@
-# README: Techdemo "Automated Docker deployments to Dockerhub with Github Actions"
+# README: Techdemo "Automatisiertes Docker deployment nach Dockerhub mit Github Actions"
 
 **authors:** Buch, Schweighofer und Spencer
+
+In unserer Techdemo werden wir versuchen Docker-Builds zu automatisieren und eine Bereitstellung des Docker Images auf DockerHub zu ermöglichen. Bei jedem Push in den Main-Branch soll das Docker-Image mit einer kleinen Node Applikation veröffentlicht werden. Um diesen Prozess zu automatisieren werden wir GitHub Actions als CI/CD-Pipeline verwenden. Dabei werden auch Secrets verwenden um eine gute Sicherheit zu gewährleisten und Unit-Tests integriert damit man Fehler früh erkennen kann.
 
 ## Einführung und Grundlagen
 
@@ -8,16 +10,13 @@
 
 Continuous Delivery ist eine Softwareentwicklungspraxis, bei der Software in Intervallen automatisch und zuverlässig bereitgestellt wird. Ziel ist es, den Entwicklungsprozess automatisiert und effizienter zu gestalten. Es ermöglicht viele vorteilhafte Funktionen wie z.B. eine kontinuierliche Integration von Codeänderungen, automatisierte Tests und eine Bereitstellung in Produktionsumgebungen. So kann man im Team effizienter zusammenarbeiten.
 
-In unserem Projekt werden zentrale Bestandteile von Continous Delivery umgesetzt. 
-**TODO** Continue mit schwaffel
+In unserem Projekt werden zentrale Bestandteile von Continous Delivery umgesetzt. Der Entwicklungsprozess wird über eine CI/CD-Pipeline (Github Actions) automatisiert, in dem bei jedem Push des Codes in den Main-Branch getestet wird, ein Docker-Image gebuilded wird und ein Deployment auf DockerHub durchgeführt wird.
 
 ### Unterschiede zwischen Continuous Integration, Continuous Delivery und Continuous Deployment
 
-- Continuous Integration: Automatisiert die Integration von Codeänderungen im Entwicklungsprozess, um Probleme früh zu erkennen.
-- Continuous Delivery: Automatisiert den Prozess der Softwarebereitstellung von getesteten Code bis zur Produktionsumgebung, wodurch Software jederzeit auslieferbar ist.
-- Continuous Deployment: Erweitert Continuous Delivery, indem automatisch jede fehlerfreie Codeintegration in die Produktionsumgebung bereitgestellt wird.
-
-**TODO** irgendwas projektbezogenes schreiben
+- Continuous Integration: Automatisiert die Integration von Codeänderungen im Entwicklungsprozess, um Probleme früh zu erkennen (gewährleistet über GitHub in unserem Projekt).
+- Continuous Delivery: Automatisiert den Prozess der Softwarebereitstellung von getesteten Code bis zur Produktionsumgebung, wodurch Software jederzeit auslieferbar ist (Docker-Image wird auf DockerHub veröffentlicht).
+- Continuous Deployment: Erweitert Continuous Delivery, indem automatisch jede fehlerfreie Codeintegration in die Produktionsumgebung bereitgestellt wird (Wenn der Build des Images funktioniert, wird automatisert in die Produktionsumgebung die Software deployed - in Form von DockerHub).
 
 ### CI-Anti Pattern identifizieren
 
@@ -41,7 +40,7 @@ Mangelnde Dokumentation: Unzureichende Dokumentation des CI-Prozesses kann zu Ve
 
 ## Deployment-Strategien
 
-**Containerbasiertes Deployment**
+### Containerbasiertes Deployment
 
 Unsere Anwendung ist für ein containerbasiertes Deployment konzipiert, wie durch das Vorhandensein eines Dockerfile angezeigt wird. Dies bedeutet, dass die Anwendung in Docker-Containern verpackt wird, wodurch sie in verschiedenen Umgebungen konsistent ausgeführt werden kann. Die Containerisierung erleichtert das Deployment und die Skalierung der Anwendung auf Container.
 
@@ -63,7 +62,7 @@ Als Beispielapplikation haben wir eine Node-Anwendung erstellt, die ganz einfach
 Um die Applikation in einem Docker Container laufen zu lassen, muss zunächst ein Docker Image initialisiert werden. Dazu sind einige Schritte notwendig:
 
 1. Erstellen eines Dockerfiles
-   
+
 ![screenshot3](/resources/img/screen3.png)
 
 Was jede Zeile im Dockerfile tut:
@@ -96,7 +95,7 @@ Die Verwendung von npm run start test ist ungewöhnlich und könnte ein Fehler s
 
 ![screenshot4](/resources/img/screen4.png)
 
-3. Starten der Applikation zum testen im Docker Container
+3. Starten der in einem Docker Container
 
 ![screenshot5](/resources/img/screen5.png)
 
@@ -179,3 +178,9 @@ Test-Szenario
 GET-Anfrage an die Wurzelroute ('/'):
 Erwartet, dass die Antwort den Statuscode 200 (OK) hat.
 Erwartet, dass der Antworttext "Hello World!" ist.
+
+### Benachrichtigung
+
+Nach dem durchlaufen der Pipeline werden Benachrichtigungen in Form von Mails verschickt. Die Einstellung dafür ist in GitHub zu finden. 
+
+![screenshot12](/resources/img/screen12.png)
