@@ -14,7 +14,7 @@ function startServer() {
 }
 
 if (require.main === module) {
-    // Direkter Aufruf, starte den Server!
+    // Direkter Aufruf, starte den Server
     startServer();
 }
 
