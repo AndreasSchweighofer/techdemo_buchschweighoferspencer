@@ -48,7 +48,7 @@ Continuous Deployment (CD)
 Durch die Integration von Git Actions in unseren Entwicklungsprozess haben wir eine Continuous Deployment (CD)-Pipeline implementiert. Diese Pipeline automatisiert den Prozess des Deployments, indem sie den Code direkt aus unserem Repository in die Produktionsumgebung überträgt, sobald die Continuous Integration (CI)-Tests erfolgreich abgeschlossen sind.
 
 ## Projektdokumentation
-
+ss
 ### Ausgangsapplikation
 
 Als Beispielapplikation haben wir eine Node-Anwendung erstellt, die ganz einfach Hello World auf http://localhost:4000 ausgibt.
