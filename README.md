@@ -87,7 +87,7 @@ Diese Zeile legt das Basis-Image fest, von dem dein Image erstellt wird. Hier wi
 
 **CMD ["npm", "run", "start", "test"]**:
 
-Legt den Standardbefehl fest, der ausgeführt wird, wenn der Container gestartet wird. 
+Legt die Standardbefehle fest, der ausgeführt wird, wenn der Container gestartet wird. 
 
 2. Builden des Docker image
 
