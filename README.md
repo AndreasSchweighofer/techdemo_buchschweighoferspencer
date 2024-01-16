@@ -87,9 +87,7 @@ Diese Zeile legt das Basis-Image fest, von dem dein Image erstellt wird. Hier wi
 
 **CMD ["npm", "run", "start", "test"]**:
 
-Legt den Standardbefehl fest, der ausgeführt wird, wenn der Container gestartet wird. In diesem Fall scheint es ein Missverständnis zu sein, da "npm", "run", "start", "test" nicht wie beabsichtigt funktionieren wird. Normalerweise sieht man etwas wie CMD ["npm", "start"], um die Anwendung zu starten.
-
-Die Verwendung von npm run start test ist ungewöhnlich und könnte ein Fehler sein. Wenn start und test separate Skripte in deiner package.json sind, solltest du dich für eines entscheiden, das beim Start des Containers ausgeführt werden soll.
+Legt den Standardbefehl fest, der ausgeführt wird, wenn der Container gestartet wird. 
 
 2. Builden des Docker image
 
