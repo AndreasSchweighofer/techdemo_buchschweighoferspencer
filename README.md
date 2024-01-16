@@ -4,7 +4,7 @@
 
 In unserer Techdemo werden wir versuchen Docker-Builds zu automatisieren und eine Bereitstellung des Docker Images auf DockerHub zu ermöglichen. Bei jedem Push in den Main-Branch soll das Docker-Image mit einer kleinen Node Applikation veröffentlicht werden. Um diesen Prozess zu automatisieren werden wir GitHub Actions als CI/CD-Pipeline verwenden. Dabei werden auch Secrets verwenden um eine gute Sicherheit zu gewährleisten und Unit-Tests integriert damit man Fehler früh erkennen kann.
 
-## Einführung und Grundlagen
+## Einführung und Grundlagen 
 
 ### Verständnis von Continuous Delivery und dessen Bedeutung
 
